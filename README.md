@@ -8,4 +8,6 @@ x1<-rnorm(1000)
 binary1<-ifelse(rnorm(1000)>0.5,1,0)
 dKS.test(1000,x1,binary1)
 
+function: Createdataset()  create random dataset consists of 4 variables
+version 1.1 created 2019.01.08
 
