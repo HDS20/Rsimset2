@@ -7,3 +7,5 @@ example:
 x1<-rnorm(1000)
 binary1<-ifelse(rnorm(1000)>0.5,1,0)
 dKS.test(1000,x1,binary1)
+
+
