@@ -1,5 +1,5 @@
 # function that create random dataset consists of 4 variables
-# version 1.1 created 2019.01.08
+# version 1.2 created 2019.01.08
 # x1 - 1'st variable
 # x2 - 2'st variable correlated with x1 at level1
 # z1  - (0,1) propobility of dependent event
@@ -7,6 +7,12 @@
 
 createdataset<-function(size,level1,level2,w1,w2){
 
+  
+  ERR=0
+  if ((size)<1) {ERR=1}
+  if (abs(level1)>1) {ERR=2}
+  if (ERR>0) {message("Error:", ERR, "\n")}
+  
   
   # Case A corr(x_1,x_2 )=0  
   #level1<-0
@@ -20,9 +26,9 @@ createdataset<-function(size,level1,level2,w1,w2){
   # 1’st variable
   x1<<-rnorm(size)
   # 2’nd variable
-  x2<<-(1-level1)*x1+level1*rnorm(size)
+  x2<<-sign(level1)*(level1^2)*x1+(1-(level1^2))*rnorm(size)
   
-  #noise / unknown factor
+  #noise 
   noise<-rnorm(size)
   
   w<-array(3)
