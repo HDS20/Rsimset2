@@ -1,7 +1,7 @@
 Package: Rsimset2
 Title: Set of useful functions for running simulations
 Version: 0.0.0.1
-Authors@R: person("Hubert", "Ostaszewski", email = "huberto74@yahoo.com", role = c("aut", "cre"))
+Authors@R: person("H", "Ostaszewski", email = "huberto74@yahoo.com", role = c("aut", "cre"))
 Description:
 The inverse-logit function can be used to construct random sample of data. 
 Data set generated this way can be useful for simulations.
