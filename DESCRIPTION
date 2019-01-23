@@ -1,0 +1,14 @@
+Package: Rsimset2
+Title: Set of useful functions for running simulations
+Version: 0.0.0.1
+Authors@R: person("Hubert", "Ostaszewski", email = "huberto74@yahoo.com", role = c("aut", "cre"))
+Description:
+The inverse-logit function can be used to construct random sample of data. 
+Data set generated this way can be useful for simulations.
+Createdataset(size,level1,level2,w1,w2) function that create random dataset consists of 4 vectors: x1(1xsize),x2(1xsize),z1(1xsize),zz1(1xsize) zz1- binary variable dependent on x1 and x2 example: Createdataset(100,0.5,1,1,1)
+dKS.test: enhancment of function KS.test that allows to check discriminant power of variable  example: x1<-rnorm(1000) binary1<-ifelse(rnorm(1000)>0.5,1,0) dKS.test(1000,x1,binary1)
+
+Depends: R (>= 3.2.3)
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
