@@ -18,7 +18,7 @@ f1<- par(mfrow = c(1, 3),pty = "s")
 for(i in 1:iteracje) {
 
   setlevel1<-(-1+2/(iteracje+1)*i)
-  createdataset(size,level1=setlevel1,level2=0.5,w1,w2)
+  createdataset(size,level1=setlevel1,level2=2,w1,w2)
   statystyki[i,1]<-cor(x1,x2)
   #statystyki[i,1]<-setlevel1
   statystyki[i,2]<-dKS.test(size,x1,zz1)$statistic
