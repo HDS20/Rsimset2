@@ -12,7 +12,7 @@ w2=1
 statystyki<-matrix(nrow=iteracje,ncol=6)
 
 #input dataset
-f1<- par(mfrow = c(2, 3),pty = "s")
+f1<- par(mfrow = c(1, 3),pty = "s")
 
 
 for(i in 1:iteracje) {
@@ -26,7 +26,7 @@ for(i in 1:iteracje) {
   statystyki[i,4]<-dKS.test(size,(w1*x1+w2*x2),zz1)$statistic
   statystyki[i,5]<-var(suma)^0.5
   statystyki[i,6]<-mean(suma)
-  if (i==14 ) {
+  if (i==1 ) {
     c1<-cor(x1,x2)
     c2<-cor(x1+x2,z1)
     c3<-cor(x1,z1)
@@ -41,9 +41,9 @@ for(i in 1:iteracje) {
 }
 
 
-plot(statystyki[,1],statystyki[,4],col='red',xlab='Corelation (X1,x2)',ylab='KS X1+X2',xlim=c(-1,1), ylim=c(0,1))
-plot(statystyki[,1],statystyki[,2],col='green',xlab='Corelation (X1,x2)',ylab='KS X1',xlim=c(-1,1), ylim=c(0,1))
-plot(statystyki[,1],statystyki[,3],col='blue',xlab='Corelation (X1,x2)',ylab='KS X2',xlim=c(-1,1), ylim=c(0,1))
+#plot(statystyki[,1],statystyki[,4],col='red',xlab='Corelation (X1,x2)',ylab='KS X1+X2',xlim=c(-1,1), ylim=c(0,1))
+#plot(statystyki[,1],statystyki[,2],col='green',xlab='Corelation (X1,x2)',ylab='KS X1',xlim=c(-1,1), ylim=c(0,1))
+#plot(statystyki[,1],statystyki[,3],col='blue',xlab='Corelation (X1,x2)',ylab='KS X2',xlim=c(-1,1), ylim=c(0,1))
 
 f2 <- par(mfrow = c(1, 1),pty = "s")
 
