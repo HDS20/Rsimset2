@@ -33,10 +33,7 @@ createdataset<-function(size,level1,level2,w1,w2,ocr=NULL){
   noise<<-rnorm(size)
   
   
-  
-  #w1<-w1/(var(x1)^0.5*w1+var(x2)^0.5*w2+var(noise)^0.5*level2)
-  #w2<-w2/(var(x1)^0.5*w1+var(x2)^0.5*w2+var(noise)^0.5*level2)
-  #level2<-level2/(var(x1)^0.5*w1+var(x2)^0.5*w2+var(noise)^0.5*level2)
+  #additional condition for simulation
   
   w1<-w1/(w1+w2+level2)
   w2<-w2/(w1+w2+level2)
